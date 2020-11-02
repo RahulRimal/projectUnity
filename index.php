@@ -9,8 +9,6 @@ $template = new Template('templates/front_page.php');
 $template->topics = $forum->getAllTopics();
 
 
-
-
 echo $template;
 
 ?>

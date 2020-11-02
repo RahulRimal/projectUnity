@@ -542,6 +542,12 @@ p
     margin: 0;
 }
 
+.sidebar-logout h6
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+
 .user-teams
 {
     display: flex;
@@ -792,3 +798,88 @@ p
 }
 
 /* Get User data ends here */
+
+
+/* Create new Topic starts here */
+#main .create-topic-main
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+.create-topic-heading
+{
+    background: var(--primary-color);
+    border-radius: 7px;
+}
+
+.create-topic-heading h3
+{
+    font-weight: bold;
+}
+
+.create-topic-body
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+#create-topic-form
+{
+    padding: 20px;
+}
+
+#create-topic-form input
+{
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 7px;
+    padding: 0 5px;
+}
+
+#create-topic-form input:focus
+{
+    outline: none;
+    border: 2px solid var(--primary-color);
+}
+
+.textarea-select-decoration
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#create-topic-form textarea
+{
+    border-radius: 7px;
+    margin: 15px 0 0 0;
+    padding: 0 5px;
+}
+
+#create-topic-form select
+{
+    border-radius: 7px;
+}
+#create-topic-form button
+{
+    border: 1px solid var(--primary-color);
+    background: white;
+    /* color: var(--primary-color); */
+    border-radius: 7px;
+    padding: 10px 15px;
+
+}
+
+#create-topic-form button:hover
+{
+    border: 1px solid var(--border-main-color);
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Create new Topic ends here */

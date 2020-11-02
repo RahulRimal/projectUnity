@@ -5,6 +5,9 @@
                     <div class="add-topic">
                         <h5>Post new Topic</h5>
                     </div>
+                    <div class="sidebar-items sidebar-logout">
+                        <h6>Logout</h6>
+                    </div>
                     <div class="user-all-topics sidebar-items">
                         <h6>
                             <i class="fas fa-paste"></i> All Discussion
@@ -20,9 +23,12 @@
                 </div>
 
                 <div class="sidebar-middle">
-                    
+                    <div class="sidebar-items create-forume">
+                        <a href="<?php echo BASE_URL;?>create_topic.php"><h6><i class="fas fa-clipboard"></i> Create a new Topic</h6></a>
+                    </div>
                 </div>
 
             </div>
 
+</section>
             <!-- right sidebar ends here -->
