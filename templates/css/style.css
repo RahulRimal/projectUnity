@@ -1,0 +1,794 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&family=Roboto&family=Roboto+Condensed&display=swap');
+
+:root
+{
+
+    --main-box-shadow: 6px 4px 7px 1px rgba(0,0,0,0.57);
+    --border-main-color: #E8E8E8;
+    --primary-color: #3DACFD;
+    --primary-hover-color: #E8442B;
+
+}
+
+/* Imp classes */
+
+.remove-width
+{
+    width: 0!important;
+}
+
+/*End of  Imp classes */
+
+
+
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+a
+{
+    text-decoration: none!important;
+}
+a:hover
+{
+    color: var(--primary-hover-color)!important;
+}
+
+p
+{
+    font-size: 12px;
+}
+
+/* Top bar starts here */
+
+#topbar
+{
+    height: 30px;
+    width: 100%;
+    padding: 5px 20px;
+    background: #E8442B;
+    color: white;
+}
+
+.topbar-content
+{
+    width: 50%;
+    height: auto;
+    display: inline block;
+    float: left;
+}
+.topbar-email
+{
+    margin: 0;
+}
+
+.topbar-social
+{
+    width: 50%;
+    height: auto;
+    display: inline block;
+    float: right;
+    text-align: center;
+}
+
+.topbar-icon
+{
+    display: inline-block;
+}
+
+.topbar-email
+{
+    display: inline-block;
+}
+
+@media only screen and (max-width: 768px)
+{
+    #topbar
+    {
+        display: none;
+    }
+}
+
+/* Top bar ends here */
+
+/* Navbar starts here */
+
+#navbar
+{
+    height: auto;
+    width: 100%;
+    background: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+.main-navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo
+{
+    width: 15%;
+    padding-left: 30px;
+}
+.navbar-logo img
+{
+    width: 90px;
+    height: 90px;
+}
+
+.navbar-search
+{
+    position: relative;
+    width: 65%;
+    height: auto;
+    text-align: center;
+}
+
+.navbar-search input
+{
+    width: 60%;
+    border-radius: 50px;
+    padding: 0 30px 0 10px;
+}
+
+.navbar-search input:focus
+{
+    outline: none;
+}
+
+.navbar-search a i
+{
+    position: absolute;
+    color: black;
+    top: 20%;
+    right: 21%;
+}
+
+
+
+.navbar-breadcrumbs
+{
+    width: 30%;
+    height: auto;
+}
+
+.navbar-list
+{
+    display: flex;
+    color: white;
+    align-items: center;
+}
+
+
+.navbar-list li
+{
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.navbar-list li a
+{
+    text-decoration: none;
+    color: black;
+}
+.user-avatar
+{
+    width: 30%;
+    overflow: hidden;
+}
+
+.user-avatar img
+{
+    width: 76%;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+.user-avatar i
+{
+    color: black;
+}
+
+.user-avatar i:hover
+{
+    cursor: pointer;
+}
+
+.signin-signup
+{
+    border: 1px solid var(--border-main-color);
+    border-radius: 7px;
+    background: var(--border-main-color);
+    padding: 4px;;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+
+    .main-navbar
+    {
+        justify-content: space-between;
+    }
+
+    .signin-signup
+    {
+        display: none;
+    }
+    .navbar-logo
+    {
+        width: 30%;
+    }
+
+    .navbar-search
+    {
+        text-align: center;
+        width: 10%;
+    }
+
+    .navbar-search input
+    {
+        display: none;
+    }
+
+    .navbar-search i
+    {
+        margin-top: -12px;
+    }
+
+    .navbar-breadcrumbs
+    {
+        width: 45%;
+    
+    }
+    .navbar-breadcrumbs li
+    {
+        padding-left: 10px;
+    }
+    .user-avatar img
+    {
+        width: 50%;
+    }
+}
+
+
+
+/* Navbar ends here */
+
+/* Main section starts here */
+
+#main
+{
+    overflow: hidden;
+}
+
+.main-content
+{
+    width: 70%;
+    display: inline;
+    float: left;
+}
+
+.filter-content
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.filter-content button
+{
+    background: white;
+    border: 1px solid var(--border-main-color);
+    border-radius: 7px;
+    padding: 0 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+.filter-topics-btn
+{
+    box-shadow: var(--main-box-shadow)
+}
+
+.main-content-topics, .main-content-topic, .main-content-replies
+{
+    position: relative;
+    margin: 0 20px 50px 50px;
+}
+
+.main-content-topics article, .main-content-topic article, .main-content-replies article
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: var(--main-box-shadow);
+    padding: 5px 10px;
+}
+
+.user-info
+{
+    width: 25%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.user-info img
+{
+    width: 100%;
+}
+
+.user-info p
+{
+    font-weight: bold;
+    font-size: 12px;
+}
+.topic-body
+{
+    margin-left: 10px;
+}
+
+.topic-title
+{
+    font-size: 17px;
+}
+
+.topic-desc
+{
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.topic-members
+{
+    text-align: end;
+}
+
+.topic-replies
+{
+    display: inline-block;
+    color: black!important;
+}
+
+
+.topic-category
+{
+    position: absolute;
+    border: 1px solid var(--border-main-color);
+    border-radius: 15px;
+    padding: 5px;
+    top: -7%;
+    right: 13%;
+    background: white;
+
+}
+
+.topic-category h5
+{
+    font-size: 10px;
+    margin: 0;
+}
+
+.member-avatar
+{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.member-avatar img
+{
+    width:20%;
+}
+
+/* Single topic page starts here */
+
+.user-topic-avatar
+{
+    width: 100%;
+    text-align: center;
+}
+
+.user-topic-avatar img
+{
+    width: 10%;
+}
+
+.reply-avatar img
+{
+    width: 30%;
+}
+
+.user-topic-avatar p
+{
+    padding: 5px 0;
+    font-family: 'Lemonada', cursive;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.user-topic-avatar p:hover
+{
+    color: var(--primary-hover-color);
+    cursor: pointer;
+}
+
+.replies-heading
+{
+    margin: 0 20px 50px 50px;
+    font-weight: bold;
+}
+
+.replies-heading hr
+{
+    display: inline;
+    float: right;
+    width: 85%;
+    height: 2px;;
+}
+
+.reply-box
+{
+    margin: 0 20px 50px 50px;
+}
+
+.submit-reply-btn
+{
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid var(--border-main-color);
+    width: 20%;
+
+}
+
+/* Single topic page ends here */
+
+@media only screen and (max-width: 768px)
+{
+    .main-content
+    {
+        width: 100%;
+    }
+
+    .main-content-topics, .main-content-topic, .main-content-replies
+    {
+        position: relative;
+        margin: 0 20px 50px 20px;
+    }
+
+    .reply-box
+    {
+        margin: 0 20px 50px 20px;
+    }
+
+    .user-info
+    {
+        width: 50%;
+        text-align: center;
+    }
+
+    .member-avatar
+    {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+
+
+/* Main section ends here */
+
+
+/* Right Sidebar starts here */
+
+.sidebar-items
+{
+    margin-bottom: 20px;
+}
+
+.right-sidebar
+{
+    width: 30%;
+    float: right;
+    padding: 0 6%;
+    margin-bottom: 50px;
+}
+.right-sidebar h6
+{
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sidebar-top
+{
+    border-bottom: 1px solid var(--border-main-color);
+    margin-bottom: 20px;
+}
+
+
+.sidebar-top .add-topic
+{
+    background: var(--primary-color);
+    padding: 2px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.sidebar-top .add-topic h5
+{
+    font-family: 'Roboto Condensed',sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+}
+
+.user-teams
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebar-middile
+{
+    margin-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    #overlay
+    {
+        position: fixed; /* Sit on top of the page content */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+
+    }
+
+    .right-sidebar
+    {
+        display: none;
+    }
+
+
+    /* .right-sidebar
+    {
+        position: fixed;
+        right: 2px;
+        top: 11.5%;
+        background: white;
+        width: 40%;
+        padding: 4% 6%;
+    } */
+
+}
+
+
+
+/* Right Sidebar ends here */
+
+
+/* Footer Starts Here !! */
+
+#footer
+{
+    width: 100%;
+    height: auto;
+}
+
+
+.footer-bottom
+{
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img
+{
+    width: 40%;
+}
+
+.footer-bottom-text
+{
+    color: white;
+    margin-top: 20px;
+}
+
+
+/* Footer Ends Here !! */
+
+
+
+/* Login Page starts here */
+
+#login_signup-main
+{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    height: 400px;
+}
+
+.login-main, .signup-main
+{
+    display: inline-block;
+    border: 2px solid var(--border-main-color);
+    border-radius: 7px;
+    padding-bottom: 30px;
+    width: 40%;
+}
+
+.login-box-heading, .signup-box-heading
+{
+    background: var(--primary-color);
+    border-radius: 7px;
+    padding: 5px 0 1px 0;
+}
+
+.login-box-body, .signup-box-body
+{
+    padding: 30px 10px;
+    width: 100%;
+
+}
+
+.login-box-body input, .signup-box-body input
+{
+    margin: 10px 0;
+    width: 90%;
+
+}
+
+.login-box-body input:focus, .signup-box-body input:focus
+{
+    outline: 2px solid var(--primary-color);
+}
+
+.remember-login-btn, .remember-signup-btn
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.remember-me
+{
+    display: flex;
+    width: 70%;
+    align-items: center;
+}
+
+.remember-me input
+{
+    width: 10%;
+}
+.remember-me label
+{
+    padding-top: 1.5%;
+}
+
+
+
+.login-submit-btn, .signup-submit-btn
+{
+    border: 1px solid var(--border-main-color);
+    background: var(--primary-color);
+    border-radius: 7px;
+    padding: 3px;
+    width: 20%;
+}
+
+
+@media only screen and (max-width: 768px)
+{
+    .login-main, .signup-main
+    {
+        width: 100%;
+    }
+}
+
+
+
+/* Login Page endss here */
+
+
+/* Get User data starts here */
+
+.get-info-first
+{
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+.get-info
+{
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 40%;
+}
+
+.get-info-select-category-heading p
+{
+    text-align: left;    
+}
+
+.get-info-get-categories
+{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+
+
+.get-info-categories-item
+{
+    border: 1px solid var(--primary-color);
+    width: 20%;
+    border-radius: 10px;
+    margin:10px;
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.get-info-categories-item:hover
+{
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+}
+
+.get-info-categories-item h3
+{
+    font-size: 15px;
+    color: var(--primary-color);
+    display: block;
+}
+.get-info-categories-item h3:hover
+{
+    color: white;
+}
+
+@media only screen and (max-width: 768px)
+{
+    .get-info
+    {
+        width: 70%;
+    }
+    .get-info-categories-item h3
+    {
+        font-size: 12px;
+    }
+}
+
+/* Get User data ends here */
