@@ -52,6 +52,21 @@ class Forum
 
 
 
+    public function create($data)
+    {
+        $this->db->query("INSERT INTO `forum_topic`(user_id, category_id, topic_title, topic_body) VALUES (:user_id, :category_id, :topic_title, :topic_body)");
+        $this->db->bind(':user_id', '1');
+        $this->db->bind(':category_id', $data['topic_category']);
+        $this->db->bind(':topic_title', $data['topic_title']);
+        $this->db->bind(':topic_body', $data['topic_body']);
+
+        if($this->db->execute())
+            return true;
+        else
+            return false;
+    }
+
+
 
 
 }

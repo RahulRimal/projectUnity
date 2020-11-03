@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to projectUnity</title>
     <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
+    <script src="<?php echo BASE_URL;?>templates/js/ckeditor.js"></script>
     <link rel="stylesheet" href="<?php echo BASE_URL;?>templates/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
@@ -42,7 +43,9 @@
                 <ul class="navbar-list">
                     <li><a href="#"><i class="far fa-comment"></i></a></li>
                     <li><a href="#"><i class="fas fa-user-friends"></i></a></li>
+                    <?php if(!isLoggedIn()): ?>
                     <li><a href="#"><h6 class="signin-signup">SignIn/SignUp</h6></a></li>
+                    <?php endif;?>
                     <li>
                         <div class="user-avatar">
                             <img src="<?php echo BASE_URL;?>templates/img/avatar.jpg" alt="avatar">
@@ -55,3 +58,11 @@
     </section>
 
     <!-- Navbar ends here -->
+
+    <!-- Message Section starts here-->
+    <!-- <div class="alert alert-danger">
+        <h6>Topic Posted Successfully</h6>
+    </div>     -->
+    <?php echo displayMessage();?>
+    
+    <!-- Message Section ends here-->

@@ -6,7 +6,13 @@
                         <h5>Post new Topic</h5>
                     </div>
                     <div class="sidebar-items sidebar-logout">
-                        <h6>Logout</h6>
+                        <form action="logout.php" method="POST">
+                            <?php if(isLoggedIn()): ?>
+                            <button name="doLogOut">Logout</button>
+                            <?php else: ?>
+                            <h6><a href="<?php echo BASE_URL;?>login.php">LogIn</a></h6>
+                            <?php endif;?>
+                        </form>
                     </div>
                     <div class="user-all-topics sidebar-items">
                         <h6>

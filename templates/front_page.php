@@ -30,7 +30,7 @@
                         </div>
                         <div class="break"></div>
                         <div class="topic-body">
-                            <h3 class="topic-title"><?php echo $topic->topic_title;?></h3>
+                            <a href="forum.php"><h3 class="topic-title"><strong><?php echo $topic->topic_title;?></strong></h3></a>
                             <p class="topic-desc">
                                 <?php echo $topic->topic_body;?>
                             </p>

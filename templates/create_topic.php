@@ -9,8 +9,8 @@
                         <h3>Create a new Topic</h3>
                     </div>
                     <div class="create-topic-body">
-                        <form id="create-topic-form">
-                                <input type="text" placeholder="Enter the Title">
+                        <form method="POST" action="create_topic.php" id="create-topic-form">
+                                <input type="text" name="topic_title" placeholder="Enter the Title">
                                 <div class="textarea-select-decoration">
                                 <textarea name="topic_body" cols="80" rows="3" placeholder="Enter content here"></textarea>
                                 
@@ -25,7 +25,7 @@
                                 </select>
                                 </div>
                                 <br>
-                                <button type="submit">Create</button>
+                                <button name="create_topic_btn" type="submit">Create</button>
                         </form>
                     </div>
                 </div>

@@ -17,6 +17,16 @@
 {
     width: 0!important;
 }
+.alert
+{
+    margin:0 3%!important;
+    width: 67%!important;
+}
+
+.alert h6
+{
+    text-align: center!important;
+}
 
 /*End of  Imp classes */
 
@@ -345,6 +355,11 @@ p
     margin-left: 10px;
 }
 
+.topic-body a
+{
+    color: black;
+}
+
 .topic-title
 {
     font-size: 17px;
@@ -396,6 +411,7 @@ p
 .member-avatar img
 {
     width:20%;
+    margin-right: 5px;
 }
 
 /* Single topic page starts here */
@@ -542,10 +558,13 @@ p
     margin: 0;
 }
 
-.sidebar-logout h6
+.sidebar-logout button, .sidebar-logout h6 a
 {
+    color: var(--primary-color);
     font-size: 15px;
     font-weight: bold;
+    border: none;
+    background: white;
 }
 
 .user-teams
