@@ -28,6 +28,13 @@
     text-align: center!important;
 }
 
+.user-avatar img, .user-avatar a img
+{
+    width: 110px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 /*End of  Imp classes */
 
 
@@ -196,20 +203,28 @@ p
 .user-avatar
 {
     width: 30%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.user-avatar img
+.navbar-user-avatar img, .reply-user-avatar img
 {
-    width: 76%;
-    height: auto;
+    width: 35px;
+    height: 30px;
     border-radius: 50%;
+}
+
+.navbar-user-settings
+{
+    display: flex;
+    justify-content: right;
+    align-items: center;
 }
 
 
 .user-avatar i
 {
     color: black;
+    margin-left: 5px;
 }
 
 .user-avatar i:hover
@@ -335,14 +350,9 @@ p
 
 .user-info
 {
-    width: 25%;
+    width: 20%;
     text-align: center;
     margin-right: 10px;
-}
-
-.user-info img
-{
-    width: 100%;
 }
 
 .user-info p
@@ -353,6 +363,7 @@ p
 .topic-body
 {
     margin-left: 10px;
+    width: 65%;
 }
 
 .topic-body a
@@ -373,7 +384,8 @@ p
 
 .topic-members
 {
-    text-align: end;
+    width: 15%;
+    text-align: center;
 }
 
 .topic-replies
@@ -403,9 +415,9 @@ p
 
 .member-avatar
 {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .member-avatar img
@@ -425,6 +437,11 @@ p
 .user-topic-avatar img
 {
     width: 10%;
+}
+
+.main-content-replies .recommanded-topics
+{
+    margin-bottom: 40px;
 }
 
 .reply-avatar img

@@ -47,13 +47,11 @@
                     <li><a href="#"><h6 class="signin-signup">SignIn/SignUp</h6></a></li>
                     <?php endif;?>
                     <li>
-                        <div class="user-avatar">
+                        <div class="user-avatar navbar-user-avatar navbar-user-settings">
                             <?php if(isLoggedIn()):?>
                                 <img src="<?php echo BASE_URL;?>templates/img/<?php echo getUserData()->image;?>" alt="avatar">
-                            <?php else:?>
-                                <img src="<?php echo BASE_URL;?>templates/img/avatar.jpg" alt="avatar">
+                                <i class="fas fa-caret-down"></i>    
                             <?php endif;?>
-                            <i class="fas fa-caret-down"></i>
                         </div>
                     </li>
                 </ul>

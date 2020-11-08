@@ -27,6 +27,24 @@ class Topic
         return $result;
     }
 
+    public function getUserAllTopic($id)
+    {
+        $this->db->query("SELECT forum_topic.*,
+            users.username, users.image, categories.category_name FROM forum_topic
+            INNER JOIN users
+            ON forum_topic.user_id = users.id
+            INNER JOIN categories
+            ON forum_topic.category_id = categories.id
+            WHERE user_id = :userId
+            ORDER BY topic_created_date DESC");
+        
+        $this->db->bind(':userId', $id);
+
+        $result = $this->db->resultset();
+
+        return $result;
+    }
+
 
     public function getRepliesCount($topic_id)
     {
@@ -50,8 +68,6 @@ class Topic
         return $result;
     }
 
-
-
     public function create($data)
     {
         $this->db->query("INSERT INTO `forum_topic`(user_id, category_id, topic_title, topic_body) VALUES (:user_id, :category_id, :topic_title, :topic_body)");
@@ -64,6 +80,23 @@ class Topic
             return true;
         else
             return false;
+    }
+
+
+    public function getForum($id)
+    {
+        $this->db->query("SELECT forum_topic.*,
+        users.image, users.username
+        FROM forum_topic
+        INNER JOIN users
+        ON forum_topic.user_id = users.id
+        WHERE forum_topic.id=:topicId");
+
+        $this->db->bind('topicId', $id);
+
+        $result = $this->db->single();
+
+        return $result;
     }
 
 }

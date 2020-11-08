@@ -27,8 +27,6 @@ class User
             return false;
     }
 
-
-
     public function login($email, $password)
     {
         $this->db->query("SELECT * FROM `users` WHERE users.email = :user_email AND users.password = :user_password");
@@ -46,7 +44,6 @@ class User
         else
             return false;
     }
-
 
     private function setUserData($row)
     {
