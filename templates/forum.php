@@ -5,8 +5,9 @@
             <div class="main-content">
                 <div class="main-content-topic">
                     <div class="user-avatar user-topic-avatar">
-                        <img src="<?php echo BASE_URL;?>templates/img/<?php echo $topic->image;?>" alt="user-name">
-                        <p class="user-name"><?php echo $topic->username;?></p>
+                        <a href="<?php echo BASE_URL;?>/user_account.php/?user=<?php echo $topic->user_id;?>"><img src="<?php echo BASE_URL;?>templates/img/<?php echo $topic->image;?>" alt="user-name"></a>
+                        <br>
+                        <a href="<?php echo BASE_URL;?>/user_account.php/?user=<?php echo $topic->user_id;?>"><p class="user-name"><?php echo $topic->username;?></p></a>
                     </div>
                     <article class="user-posted-topic">
                         <div class="topic-body">
@@ -26,16 +27,17 @@
                 <?php foreach($replies as $reply):?>
                     <article class="recommanded-topics">
                         <div class="user-avatar user-info reply-avatar">
-                            <img src="<?php echo BASE_URL;?>templates/img/avatar1.jpg" alt="user-name">
-                            <p>RahulR</p>
+                            <a href="<?php echo BASE_URL;?>/user_account.php/?user=<?php echo $reply->user_id;?>"><img src="<?php echo BASE_URL;?>templates/img/<?php echo $reply->image;?>" alt="user-name"></a>
+                            <a href="<?php echo BASE_URL;?>/user_account.php/?user=<?php echo $reply->user_id;?>"><p><?php echo $reply->username;?></p></a>
                         </div>
                         <div class="topic-body">
                             <p class="topic-desc">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat similique nesciunt quibusdam sed nemo obcaecati perspiciatis est, doloribus, itaque suscipit consectetur magnam maxime? Labore rem laboriosam qui facilis, saepe fugit.
+                                <?php echo $reply->reply_body;?>
                             </p>
                         </div>
                     </article>
                 <?php endforeach;?>
+                    <h5>Add your Reply</h5>
                 <?php else: ?>
                     <h3>No Replies to this Forum.</h3>
                 <?php endif;?>
@@ -46,13 +48,13 @@
                 <!-- reply area starts here -->
                 <div class="reply-box">
                 <?php if(isLoggedIn()):?>
-                    <form action="#">
+                    <form action="<?php echo BASE_URL;?>reply.php?topic=<?php echo $topic->id?>" method="POST">
                         <textarea name="replybody" id="reply" cols="30" rows="10"></textarea>
                         <script>
                             CKEDITOR.replace('reply');
                         </script>
 
-                        <button class="submit-reply-btn">Reply</button>
+                        <button name="submit-reply-btn" class="submit-reply-btn">Reply</button>
                     </form>
                 <?php else:?>
                     <a href="login.php" class="login-alert-text"><h4>Please Login Reply</h4></a>

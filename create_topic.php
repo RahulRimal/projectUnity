@@ -2,12 +2,12 @@
 
 <?php
 
-// $topic = new Topic();
+$topic = new Topic();
 
 if(isset($_POST['create_topic_btn']))
 {
 
-    $topic = new Topic();
+    // $topic = new Topic();
     $validate = new Validator();
 
     $topicData = array();
@@ -27,12 +27,9 @@ if(isset($_POST['create_topic_btn']))
             redirect('index.php', 'Failed to post the topic', 'error');
     }
 
-
 }
 
-
 $template = new Template('templates/create_topic.php');
-
 
 echo $template;
 ?>

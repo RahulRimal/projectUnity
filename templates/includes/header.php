@@ -41,7 +41,7 @@
             </div>
             <div class="navbar-breadcrumbs">
                 <ul class="navbar-list">
-                    <li><a href="#"><i class="far fa-comment"></i></a></li>
+                    <li><a href="<?php echo BASE_URL;?>message.php"><i class="far fa-comment"></i></a></li>
                     <li><a href="#"><i class="fas fa-user-friends"></i></a></li>
                     <?php if(!isLoggedIn()): ?>
                     <li><a href="#"><h6 class="signin-signup">SignIn/SignUp</h6></a></li>

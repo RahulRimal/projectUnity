@@ -3,7 +3,9 @@
 <div class="right-sidebar">
                 <div class="sidebar-top">
                     <div class="add-topic">
-                        <h5>Post new Topic</h5>
+                        <a href="<?php echo BASE_URL;?>/create_topic.php">
+                            <h5>Post new Topic</h5>
+                        </a>
                     </div>
                     <div class="sidebar-items sidebar-logout">
                         <form action="logout.php" method="POST">
@@ -15,9 +17,9 @@
                         </form>
                     </div>
                     <div class="user-all-topics sidebar-items">
-                        <h6>
+                        <a href="<?php echo BASE_URL;?>message.php"><h6>
                             <i class="fas fa-paste"></i> All Discussion
-                        </h6>
+                        </h6></a>
                     </div>
                     <div class="sidebar-items">
                         <h6>Interested Topics</h6>    

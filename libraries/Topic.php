@@ -61,7 +61,8 @@ class Topic
         $this->db->query("SELECT replies.*, users.* FROM replies
             INNER JOIN users
             ON replies.user_id = users.id
-            WHERE topic_id = :topic_id");
+            WHERE topic_id = :topic_id
+            ORDER BY replied_date DESC");
         $this->db->bind(':topic_id', $topic_id);
 
         $result = $this->db->resultset();
@@ -71,7 +72,7 @@ class Topic
     public function create($data)
     {
         $this->db->query("INSERT INTO `forum_topic`(user_id, category_id, topic_title, topic_body) VALUES (:user_id, :category_id, :topic_title, :topic_body)");
-        $this->db->bind(':user_id', '1');
+        $this->db->bind(':user_id', getuserData()->id);
         $this->db->bind(':category_id', $data['topic_category']);
         $this->db->bind(':topic_title', $data['topic_title']);
         $this->db->bind(':topic_body', $data['topic_body']);
@@ -97,6 +98,21 @@ class Topic
         $result = $this->db->single();
 
         return $result;
+    }
+
+    public function replyToTopic($data)
+    {
+        $this->db->query("INSERT INTO `replies`(user_id, topic_id, reply_body) VALUES (:userId, :topicId, :replyBody)");
+        $this->db->bind(':topicId', $data['topicId']);
+        $this->db->bind(':userId', $data['userId']);
+        $this->db->bind(':replyBody', $data['repliedText']);
+
+        if($this->db->execute())
+            return true;
+        else
+            return false;
+
+
     }
 
 }
