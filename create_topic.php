@@ -2,11 +2,12 @@
 
 <?php
 
-$topic = new Forum();
+// $topic = new Topic();
 
 if(isset($_POST['create_topic_btn']))
 {
 
+    $topic = new Topic();
     $validate = new Validator();
 
     $topicData = array();

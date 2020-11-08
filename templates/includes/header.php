@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to projectUnity</title>
     <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
-    <script src="<?php echo BASE_URL;?>templates/js/ckeditor.js"></script>
+    <script src="<?php echo BASE_URL;?>templates/js/ckeditor/ckeditor.js"></script>
     <link rel="stylesheet" href="<?php echo BASE_URL;?>templates/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
@@ -33,7 +33,7 @@
     <section id="navbar">
         <nav class="main-navbar">
             <div class="navbar-logo">
-                <img src="<?php echo BASE_URL;?>templates/img/logo.png" alt="logo">
+                <a href="<?php echo BASE_URL;?>"><img src="<?php echo BASE_URL;?>templates/img/logo.png" alt="logo"></a>
             </div>
             <div class="navbar-search">
                 <input type="text" name="search_text" placeholder="Search your topic">
@@ -48,7 +48,11 @@
                     <?php endif;?>
                     <li>
                         <div class="user-avatar">
-                            <img src="<?php echo BASE_URL;?>templates/img/avatar.jpg" alt="avatar">
+                            <?php if(isLoggedIn()):?>
+                                <img src="<?php echo BASE_URL;?>templates/img/<?php echo getUserData()->image;?>" alt="avatar">
+                            <?php else:?>
+                                <img src="<?php echo BASE_URL;?>templates/img/avatar.jpg" alt="avatar">
+                            <?php endif;?>
                             <i class="fas fa-caret-down"></i>
                         </div>
                     </li>

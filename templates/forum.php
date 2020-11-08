@@ -1,12 +1,11 @@
 <?php include('includes/header.php');?>
 
-<!-- Main section starts here -->
 <section id="main">
         <main>
             <div class="main-content">
                 <div class="main-content-topic">
                     <div class="user-avatar user-topic-avatar">
-                        <img src="img/avatar1.jpg" alt="user-name">
+                        <img src="<?php echo BASE_URL;?>templates/img/avatar1.jpg" alt="user-name">
                         <p class="user-name">Rahul Rimal</p>
                     </div>
                     <article class="user-posted-topic">
@@ -25,7 +24,7 @@
                 <div class="main-content-replies">
                     <article class="recommanded-topics">
                         <div class="user-avatar user-info reply-avatar">
-                            <img src="img/avatar1.jpg" alt="user-name">
+                            <img src="<?php echo BASE_URL;?>templates/img/avatar1.jpg" alt="user-name">
                             <p>RahulR</p>
                         </div>
                         <div class="topic-body">
@@ -50,12 +49,12 @@
                         <button class="submit-reply-btn">Reply</button>
                     </form>
                 </div>
-
                 <!-- end of reply area -->
-
             </div>
         </main>
 
-    <!-- Main Section Ends here  -->
-    <?php include('includes/right_sidebar.php');?>
-    <?php include('includes/footer.php');?>
+
+
+
+<?php include('includes/right_sidebar.php');?>
+<?php include('includes/footer.php');?>

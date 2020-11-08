@@ -22,10 +22,7 @@ if(isset($_POST['loginButton']))
         redirect('index.php');
 }
 
-
-
 $templates = new Template('templates/login.php');
-
 
 echo $templates;
 

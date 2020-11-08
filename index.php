@@ -2,12 +2,11 @@
 
 <?php
 
-$forum = new Forum();
+$forum = new Topic();
 
 $template = new Template('templates/front_page.php');
 
 $template->topics = $forum->getAllTopics();
-
 
 echo $template;
 

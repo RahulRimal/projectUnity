@@ -30,7 +30,11 @@
 
                 <div class="sidebar-middle">
                     <div class="sidebar-items create-forume">
+                        <?php if(isLoggedIn()):?>
                         <a href="<?php echo BASE_URL;?>create_topic.php"><h6><i class="fas fa-clipboard"></i> Create a new Topic</h6></a>
+                        <?php else: ?>
+                        <a href="login.php"><h6 class="login-alert-text">Please Login to create new topc</h6></a>
+                        <?php endif;?>
                     </div>
                 </div>
 

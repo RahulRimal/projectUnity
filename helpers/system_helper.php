@@ -54,6 +54,27 @@ function isLoggedIn()
         return false;
 }
 
+function getUserData()
+{
+    if(isLoggedIn())
+    {
+        $db = new Database();
+
+        $id = $_SESSION['userId'];
+        
+        $userData = $db->query("SELECT * FROM users WHERE id = :userId");
+        $db->bind(':userId', $id);
+
+        $user = $db->single();
+
+        return $user;
+    }
+    else
+        return null;
+}
+
+
+
 
 
 ?>

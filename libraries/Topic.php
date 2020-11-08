@@ -1,6 +1,6 @@
 <?php
 
-class Forum
+class Topic
 {
 
     private $db;
@@ -65,9 +65,6 @@ class Forum
         else
             return false;
     }
-
-
-
 
 }
 
